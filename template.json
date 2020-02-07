@@ -1,6 +1,6 @@
 {
   "variables": {
-    "name": "jordan/ubuntu-1604-lts",
+    "name": "yihalachev/ubuntu-1604-lts",
     "build_name": "ubuntu-1604-lts",
     "build_cpu_cores": "2",
     "build_memory": "1024",
@@ -33,7 +33,7 @@
         "preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed.cfg ",
         "debian-installer=en_US auto locale=en_US kbd-chooser/method=us ",
         "hostname={{ user `build_name` }} ",
-        "fb=false debconf/fronten=d=noninteractive ",
+        "fb=false debconf/frontend=noninteractive ",
         "keyboard-configuration/modelcode=SKIP keyboard-configuration/layout=USA keyboard-configuration/variant=USA console-setup/ask_detect=false ",
         "initrd=/install/initrd.gz -- <enter>"
       ],
